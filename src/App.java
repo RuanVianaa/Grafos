@@ -111,25 +111,25 @@ public class App {
                     System.out.print("Digite o vértice de destino: ");
                     int cepDestinoAlcance = scanner.nextInt();
                     Cidade destinoAlcance = cepCidades.get(cepDestinoAlcance);
-                    if (grafo.alcance(origemAlcance, destinoAlcance)) {
+                   /* if (grafo.alcance(origemAlcance, destinoAlcance)) {
                         System.out.println("Há um caminho entre " + origemAlcance + " e " + destinoAlcance);
                     } else {
                         System.out.println("Não há um caminho entre " + origemAlcance + " e " + destinoAlcance);
-                    }
+                    } */
                     break;
                 case 5:
                     System.out.print("Digite o vértice inicial para DFS: ");
                     int cepInicialDFS = scanner.nextInt();
                     Cidade inicialDFS = cepCidades.get(cepInicialDFS);
-                    List<Cidade> resultadoDFS = grafo.buscaEmProfundidade(inicialDFS);
-                    System.out.println("Ordem de visitação (DFS): " + resultadoDFS);
+                    //List<Cidade> resultadoDFS = grafo.buscaEmProfundidade(inicialDFS);
+                    //System.out.println("Ordem de visitação (DFS): " + resultadoDFS);
                     break;
                 case 6:
                     System.out.print("Digite o vértice inicial para BFS: ");
                     int cepInicialBFS = scanner.nextInt();
                     Cidade inicialBFS = cepCidades.get(cepInicialBFS);
-                    List<Cidade> resultadoBFS = grafo.exploracaoEmLargura(inicialBFS);
-                    System.out.println("Ordem de visitação (BFS): " + resultadoBFS);
+                    //List<Cidade> resultadoBFS = grafo.exploracaoEmLargura(inicialBFS);
+                    //System.out.println("Ordem de visitação (BFS): " + resultadoBFS);
                     break;
                 case 7:
                     System.out.print("Digite o vértice de origem para Dijkstra: ");
@@ -138,11 +138,11 @@ public class App {
                     System.out.print("Digite o vértice de destino: ");
                     cepDestino = scanner.nextInt();
                     destino = cepCidades.get(cepDestino);
-                    List<Cidade> caminho = grafo.dijkstra(origemDijkstra, destino);
+                   /* List<Cidade> caminho = grafo.dijkstra(origemDijkstra, destino);
                     System.out.println("Menores caminhos a partir de " + origemDijkstra + "ate " + destino + ":"); 
                     for (Cidade c : caminho) {
                         System.out.println("|" + c);
-                    }
+                    } */
                     break;
                 case 0:
                     System.out.println("Saindo...");
