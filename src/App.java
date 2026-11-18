@@ -53,7 +53,7 @@ public class App {
 
     public static void main() throws Exception {
         Scanner scanner = new Scanner(System.in);
-        Grafo<______> grafo = new Grafo<>();
+        Grafo<Cidade> grafo = new Grafo<>();
         HashMap<Integer, Cidade> cepCidades = new HashMap<>();
         int opcao;
         boolean direcionado = false;

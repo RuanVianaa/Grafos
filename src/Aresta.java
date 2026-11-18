@@ -3,8 +3,8 @@ public class Aresta<T> {
         int peso;
 
         public Aresta(T destino, int peso) {
-            this.vertice = ____;
-            this.peso = _____;
+            this.vertice = destino;
+            this.peso = peso;
         }
     
 }

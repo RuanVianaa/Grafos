@@ -5,11 +5,11 @@ public class Grafo<T> {
     ArrayList<T> visitados;
 
     public Grafo() {
-        this.meuGrafo = new _____<>();
+        this.meuGrafo = new HashMap<>();
     }
 
     public boolean adicionarVertice(T vertice) {
-        if (!meuGrafo._______(vertice)) {
+        if (!meuGrafo.containsKey(vertice)) {
             meuGrafo.put(vertice, new LinkedList<>());
             return true;
         }
@@ -18,9 +18,9 @@ public class Grafo<T> {
 
     public boolean adicionarAresta(T origem, T destino, int peso, boolean direcionado) {
         if (meuGrafo.containsKey(origem) && meuGrafo.containsKey(destino)) {
-            meuGrafo.get(_____).add(new Aresta(destino, peso));
+            meuGrafo.get(origem).add(new Aresta(destino, peso));
             if (!direcionado) {
-                meuGrafo.get(______).add(new Aresta(origem, peso));
+                meuGrafo.get(destino).add(new Aresta(origem, peso));
             }
             return true;
         }
@@ -33,7 +33,7 @@ public class Grafo<T> {
             LinkedList<Aresta> arestas = registro.getValue();
             System.out.print("Vértice " + vertice + ": ");
             for (Aresta aresta : arestas) {
-                System.out.print("-> (Destino: " + aresta.______ + ", Peso: " + aresta._____ + ") ");
+                System.out.print("-> (Destino: " + aresta.vertice + ", Peso: " + aresta.peso + ") ");
             }
             System.out.println("\n");
         }
